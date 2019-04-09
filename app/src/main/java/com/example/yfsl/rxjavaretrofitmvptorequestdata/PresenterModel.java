@@ -1,16 +1,21 @@
 package com.example.yfsl.rxjavaretrofitmvptorequestdata;
 
+/**
+ * 创建一个面向Model层的接口 还有一个面向View层的接口PresenterView
+ * 定义3个方法
+ */
 public interface PresenterModel {
     /**
-     * 创建Presenter
+     * 初始化PresenterModel
      */
-    void onCreate();
+    void init();
     /**
-     * 销毁Presenter
+     * 销毁PresenterModel
      */
     void onDestroy();
     /**
-     * 绑定Presenter和View
+     * 绑定PresenterModel和PresenterView
+     * 实现View和Model的间接交互
      */
     void bindPresenterVIew(PresenterView presenterView);
 }

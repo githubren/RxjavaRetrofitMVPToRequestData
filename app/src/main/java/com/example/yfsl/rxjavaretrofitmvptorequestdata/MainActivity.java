@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     private void initView() {
         post_btn = findViewById(R.id.post_btn);
         showdata_tv = findViewById(R.id.showdata_tv);
-        dataModelPresenter.onCreate();
+        dataModelPresenter.init();
     }
 
     private DataModelPv mDataModelPv = new DataModelPv() {
