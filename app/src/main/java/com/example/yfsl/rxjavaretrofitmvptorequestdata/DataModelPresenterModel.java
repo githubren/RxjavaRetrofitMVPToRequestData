@@ -41,11 +41,11 @@ public class DataModelPresenterModel extends BasePresenterModelImp {
      * @param account key
      * @param password value
      */
-    public void postData(String url, String account, String password){
+    public void postData(String url,String account,String password){
         //在此处处理map 使得activity中调用时直接传入参数 简化activity中的代码
         Map<String,String> map = new HashMap<>();
-        map.put("USER_ID",account);
-        map.put("PASSWORD",password);
+        map.put("USER_PHONE1",account);
+        map.put("USER_PSW",password);
         //创建DataManager对象 进行postData
         DataManager dataManager = DataManager.getInstance(mContext);
         dataManager.postData(url, map)
