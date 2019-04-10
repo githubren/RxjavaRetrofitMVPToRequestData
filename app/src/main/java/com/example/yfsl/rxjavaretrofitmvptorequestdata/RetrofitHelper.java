@@ -89,6 +89,10 @@ public class RetrofitHelper {
         return okHttpClient;
     }
 
+    /**
+     * 创建接口类型对象
+     * @return
+     */
     public ApiService getServer(){
         return mRetrofit.create(ApiService.class);
     }

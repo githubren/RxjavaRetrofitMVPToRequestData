@@ -25,14 +25,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initData() {
-        final Map<String,String> map = new HashMap<>();
-        map.put("USER_PHONE1",Constant.USER_PHONE1);
-        map.put("USER_PSW",Constant.USER_PSW);
+        //绑定model和view
         dataModelPresenter.bindPresenterView(mDataModelPv);
         post_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dataModelPresenter.postData(Constant.URL,map);
+                dataModelPresenter.postData(Constant.URL,Constant.USER_PHONE1,Constant.USER_PSW);
             }
         });
     }
@@ -43,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         dataModelPresenter.init();
     }
 
+    //重写view层接口中的方法 对数据请求结果做出处理
     private DataModelPv mDataModelPv = new DataModelPv() {
         @Override
         public void onSuccess(DataModel dataModel) {

@@ -3,6 +3,7 @@ package com.example.yfsl.rxjavaretrofitmvptorequestdata;
 public class DataModel {
 
     /**
+     * 请求返回的数据实体类
      * msg : 登陆成功
      * code : 1
      * data : {"Token":"0b070330-ac3c-477e-8f4b-e4a61bfb95ea","UserName":"林丹","UserID":418,"RoleName":"测试","RoleID":22,"RoleApp":[{"Name":"登录权限"},{"Name":"部门权限"}],"DepName":"测试2部","DepID":160,"USER_IMG":"http://172.25.10.195:8080/file/User_Head/Head418.jpg","USER_IMG_APP":"http://222.209.86.146:3312/file/User_Head/Head418.jpg"}
