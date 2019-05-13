@@ -47,4 +47,8 @@ public class DataManager {
     public Observable<DataModel> postData(String url, Map<String,String> map){
         return mApiService.postData(url, map);
     }
+
+    public Observable<ResultBean<String>> getNodeDetail(long patNodeId){
+        return mApiService.getNodeDetail(patNodeId);
+    }
 }

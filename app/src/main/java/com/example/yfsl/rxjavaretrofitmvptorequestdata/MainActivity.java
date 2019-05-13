@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
-    private Button post_btn;
+    private Button post_btn,get_btn;
     private TextView showdata_tv;
     private DataModelPresenterModel dataModelPresenter = new DataModelPresenterModel(this);
 
@@ -33,10 +33,18 @@ public class MainActivity extends AppCompatActivity {
                 dataModelPresenter.postData(Constant.URL,Constant.USER_PHONE1,Constant.USER_PSW);
             }
         });
+
+        get_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dataModelPresenter.getNodeDetail(724985);
+            }
+        });
     }
 
     private void initView() {
         post_btn = findViewById(R.id.post_btn);
+        get_btn = findViewById(R.id.get_btn);
         showdata_tv = findViewById(R.id.showdata_tv);
         dataModelPresenter.init();
     }

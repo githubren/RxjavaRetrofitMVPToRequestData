@@ -78,4 +78,32 @@ public class DataModelPresenterModel extends BasePresenterModelImp {
                     }
                 });
     }
+
+    public void getNodeDetail(long patNodeId){
+        DataManager dataManager = DataManager.getInstance(mContext);
+        dataManager.getNodeDetail(patNodeId)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<ResultBean<String>>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onNext(ResultBean<String> stringResultBean) {
+
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+
+                    }
+
+                    @Override
+                    public void onComplete() {
+
+                    }
+                });
+    }
 }
